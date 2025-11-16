@@ -162,8 +162,7 @@ public class Ventana {
         });
     }
 
-    private void setContentPane(JPanel panel) {
-    }
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ventana");
