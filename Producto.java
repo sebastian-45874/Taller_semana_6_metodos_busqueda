@@ -5,7 +5,7 @@ public class Producto {
     private int ventasMes1;
     private int ventasMes2;
     private int ventasMes3;
-    //Constructores
+    //Contructores
     public Producto(int id, String nombre, float precio, int ventasMes1, int ventasMes2, int ventasMes3) {
         this.id = id;
         this.nombre = nombre;
@@ -14,7 +14,7 @@ public class Producto {
         this.ventasMes2 = ventasMes2;
         this.ventasMes3 = ventasMes3;
     }
-    //Getters y Setters
+    //Getters and Setters
     public int getId() {
         return id;
     }
@@ -62,11 +62,11 @@ public class Producto {
     public void setVentasMes3(int ventasMes3) {
         this.ventasMes3 = ventasMes3;
     }
-    // Calcula el total de ventas en los tres meses
+    // Calcula el total de ventas
     public int getTotalVentas() {
         return ventasMes1 + ventasMes2 + ventasMes3;
     }
-    // Devuelve la informacion del producto 
+    // Muestra la informacion del producto
     @Override
     public String toString() {
         return "ID: " + id + " | " + nombre + " | $" + precio +
