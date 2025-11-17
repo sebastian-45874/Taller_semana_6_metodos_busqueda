@@ -83,7 +83,7 @@ public class Ventana {
                 }
             }
         });
-
+        //Este es el boton para poder actualizar el precio
         btnActualizarPrecio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
