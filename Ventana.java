@@ -60,6 +60,13 @@ public class Ventana {
             }
         });
 
+        /*Comentario Joan Chiscuet
+        Esta sección del código maneja la búsqueda de un producto por ID cuando el usuario presiona el botón correspondiente.
+        Primero intenta convertir el texto ingresado a un número; si es válido, busca el producto en la tienda y actualiza la lista visual
+        con el resultado. Si el producto existe, muestra un mensaje de “Producto encontrado”, y si no, indica que no se encontró.
+        Además, controla errores mostrando un mensaje cuando el ID ingresado no es válido.
+        */
+
 
         btnNombre.addActionListener(new ActionListener() {
             @Override
