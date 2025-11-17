@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//Panel Principal y componentes graficos
 public class Ventana {
     private JPanel panel;
     private JList list1;
@@ -21,8 +22,9 @@ public class Ventana {
     private JLabel lblMes;
     private JLabel lblCantidad;
 
+    //Creacion del objeto Tienda
     Tienda tienda = new Tienda();
-
+    //Aqui se llena los productos de la tienda
     public void llenarLista(){
         DefaultListModel dlm = new DefaultListModel();
         for(Producto p : tienda.getProductos()){
@@ -33,12 +35,13 @@ public class Ventana {
 
     public Ventana() {
 
-
+        //Carga los productos
         llenarLista();
 
         btnId.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Aqui se procesa la busqueda po ID
                 try{
                     int id = Integer.parseInt(txtId.getText());
                     Producto encontrado = tienda.buscarPorId(id);
@@ -61,6 +64,7 @@ public class Ventana {
         btnNombre.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Aquí se procesa la búsqueda por nombre
                 String nombre = txtNombre.getText().trim();
                 if(nombre.isEmpty()){
                     JOptionPane.showMessageDialog(null,"Ingrese un  nombre");
@@ -152,8 +156,9 @@ public class Ventana {
                         JOptionPane.showMessageDialog(null, "Error: Verifique que los datos sean validos");
                     }
                 }
+                //Actualiza la lista
                 llenarLista();
-
+                //Limpiza de campos
                 txtId.setText("");
                 txtNombre.setText("");
                 txtActualizarPrecio.setText("");
@@ -163,7 +168,7 @@ public class Ventana {
     }
 
 
-
+    //Main
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ventana");
         frame.setContentPane(new Ventana().panel);
